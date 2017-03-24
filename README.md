@@ -8,7 +8,7 @@ vlmcsd is not a one-click activation or crack tool intended to activate illegal 
 Docker based in Alpine OS with vlmcsd compiled from source (GitHub)
 
 ## Server Usage:
-> $ docker run -d -p 1688:1688 --name vlmcsd mikolatero/vlmcsd
+> $ docker run -d -p 1688:1688 --restart=always --name vlmcsd mikolatero/vlmcsd
 
 ## To view docker log:
 Now (thanks to embii74) vlmcsd process send logs to docker.
