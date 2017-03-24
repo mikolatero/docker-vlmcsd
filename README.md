@@ -12,7 +12,7 @@ Docker based in Alpine OS with vlmcsd compiled from source (GitHub)
 
 ## To view docker log:
 Now (thanks to embii74) vlmcsd process send logs to docker.
-> $ docker logs vlmcsd . (change 'vlmcsd' with the docker's name)
+> $ docker logs vlmcsd (change 'vlmcsd' with the docker's name)
 
 ## Client
 ### Windows
