@@ -16,5 +16,5 @@ RUN apk update \
 
 EXPOSE 1688
 
-CMD ["/vlmcsd", "-D", "-d", "-t", "3"]
+CMD ["/vlmcsd", "-D", "-d", "-t", "3", "-e", "-v"]
 
