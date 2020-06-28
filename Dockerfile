@@ -1,18 +1,12 @@
-FROM alpine:latest
+FROM alpine:latest as builder
+WORKDIR /root
+RUN apk add --no-cache git make build-base && \
+    git clone https://github.com/Wind4/vlmcsd.git && \
+    cd vlmcsd && \
+    make
 
-RUN apk update \
-    && apk upgrade \
-    && apk add --no-cache build-base gcc abuild binutils cmake git \
-    && cd / \
-    && git clone https://github.com/Wind4/vlmcsd.git vlmgit \
-    && cd vlmgit \
-    && make \
-    && chmod +x bin/vlmcsd \
-    && mv bin/vlmcsd / \
-    && cd / \
-    && apk del build-base gcc abuild binutils cmake git \
-    && rm -rf /vlmgit  \
-    && rm -rf /var/cache/apk/*
+FROM alpine:latest
+COPY --from=builder /root/vlmcsd/bin/vlmcsd /vlmcsd
 
 EXPOSE 1688
 
