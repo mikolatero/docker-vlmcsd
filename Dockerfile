@@ -8,7 +8,7 @@ RUN apk add --no-cache git make build-base && \
 FROM alpine:latest
 COPY --from=builder /root/vlmcsd/bin/vlmcsd /vlmcsd
 
-EXPOSE 1688
+EXPOSE 1688/tcp
 
 CMD ["/vlmcsd", "-D", "-d", "-t", "3", "-e", "-v"]
 
