@@ -18,22 +18,22 @@ Now (thanks to embii74) vlmcsd process send logs to docker.
 ### Windows
 >slmgr.vbs -upk  
 >slmgr.vbs -ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX  
->slmgr.vbs -skms DOCKER_IP:PORT
+>slmgr.vbs -skms DOCKER_IP:PORT  
 >slmgr.vbs -ato  
 >slmgr.vbs -dlv  
 
 ### Office x86
 >cd \Program Files (x86)\Microsoft Office\Office16  
->cscript ospp.vbs /sethst:DOCKER_IP
->cscript ospp.vbs /setprt:PORT
+>cscript ospp.vbs /sethst:DOCKER_IP  
+>cscript ospp.vbs /setprt:PORT  
 >cscript ospp.vbs /inpkey:xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
 >cscript ospp.vbs /act  
 >cscript ospp.vbs /dstatusall  
 
 ### Office x86_64
 >cd \Program Files\Microsoft Office\Office16  
->cscript ospp.vbs /sethst:DOCKER_IP
->cscript ospp.vbs /setprt:PORT
+>cscript ospp.vbs /sethst:DOCKER_IP  
+>cscript ospp.vbs /setprt:PORT  
 >cscript ospp.vbs /inpkey:xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
 >cscript ospp.vbs /act  
 >cscript ospp.vbs /dstatusall  
